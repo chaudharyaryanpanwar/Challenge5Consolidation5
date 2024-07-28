@@ -86,7 +86,7 @@ class User: Codable, Hashable , Identifiable {
 }
 
 @Model
-class Friend: Codable , Hashable {
+class Friend: Codable , Hashable , Identifiable {
     let id: String
     let name: String
     
