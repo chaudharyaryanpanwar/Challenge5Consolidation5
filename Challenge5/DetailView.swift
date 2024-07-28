@@ -20,7 +20,7 @@ struct DetailView: View {
                     Text("Email : \(user.email)")
                     HStack {
                         Text("Registation Date : ")
-                        Text(user.registeredDate ?? Date() , format: .dateTime.day().month().year().hour() )
+                        Text(user.registered , format: .dateTime.day().month().year().hour() )
                     }
                     Text("Address : \(user.address)")
                 }
@@ -71,8 +71,4 @@ struct DetailView: View {
     }
 }
 
-#Preview {
-    NavigationStack {
-        DetailView(user : User(id: "1", isActive: true, name: "Aryan", age: 34, company: "baddi company", email: "apnaemail@email.com", address: "Bharsi , Shamli " , about: "very talented", registered: "2015-11-10T01:47:18-00:00", tags: ["coolminded","confident", "properity" , "Having good friends" , "Networking"], friends: [Friend(id: "23", name: "sahil") , Friend(id: "234", name: "Kalua")]))
-    }
-}
+

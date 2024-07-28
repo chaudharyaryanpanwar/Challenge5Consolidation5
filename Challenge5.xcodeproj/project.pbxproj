@@ -12,7 +12,6 @@
 		B65AFF412C552686004A5DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65AFF402C552686004A5DE5 /* Assets.xcassets */; };
 		B65AFF442C552686004A5DE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65AFF432C552686004A5DE5 /* Preview Assets.xcassets */; };
 		B65AFF4B2C5527DF004A5DE5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AFF4A2C5527DF004A5DE5 /* User.swift */; };
-		B65AFF4D2C55DD7A004A5DE5 /* ContentView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AFF4C2C55DD7A004A5DE5 /* ContentView1.swift */; };
 		B65AFF4F2C55E319004A5DE5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AFF4E2C55E319004A5DE5 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +22,6 @@
 		B65AFF402C552686004A5DE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B65AFF432C552686004A5DE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B65AFF4A2C5527DF004A5DE5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		B65AFF4C2C55DD7A004A5DE5 /* ContentView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView1.swift; sourceTree = "<group>"; };
 		B65AFF4E2C55E319004A5DE5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +58,6 @@
 				B65AFF3C2C552684004A5DE5 /* Challenge5App.swift */,
 				B65AFF3E2C552684004A5DE5 /* ContentView.swift */,
 				B65AFF4E2C55E319004A5DE5 /* DetailView.swift */,
-				B65AFF4C2C55DD7A004A5DE5 /* ContentView1.swift */,
 				B65AFF4A2C5527DF004A5DE5 /* User.swift */,
 				B65AFF402C552686004A5DE5 /* Assets.xcassets */,
 				B65AFF422C552686004A5DE5 /* Preview Content */,
@@ -146,7 +143,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65AFF4D2C55DD7A004A5DE5 /* ContentView1.swift in Sources */,
 				B65AFF3F2C552684004A5DE5 /* ContentView.swift in Sources */,
 				B65AFF3D2C552684004A5DE5 /* Challenge5App.swift in Sources */,
 				B65AFF4F2C55E319004A5DE5 /* DetailView.swift in Sources */,

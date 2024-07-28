@@ -5,6 +5,7 @@
 //  Created by Aryan Panwar on 27/07/24.
 //
 
+import SwiftData
 import SwiftUI
 
 
@@ -16,7 +17,8 @@ struct ContentView: View {
     @State private var showingConfirmation = false
     @State private var confirmationMessage = ""
     
-    @State private var users = [User]()
+    @Query var users : [User]
+    @Environment(\.modelContext) var modelContext
     
     var body: some View {
         NavigationStack {
@@ -66,29 +68,32 @@ struct ContentView: View {
     
     func loadUsers() async {
         if users.isEmpty {
-            let url = URL(string :  "https://www.hackingwithswift.com/samples/friendface.json")!
+            let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
             var request = URLRequest(url: url)
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpMethod = "GET"
             
             do {
-                let (data , _) = try await URLSession.shared.data(for: request)
+                let (data, _) = try await URLSession.shared.data(for: request)
                 
-                let decodedData = try JSONDecoder().decode([User].self, from: data)
-                users = decodedData
+                let decoder = JSONDecoder()
                 
-                confirmationMessage = "Successfully downloaded JSON from "
+                decoder.dateDecodingStrategy = .iso8601
+                
+                let decodedData = try decoder.decode([User].self, from: data)
+                for user in decodedData {
+                    modelContext.insert(user)
+                }
+                
+                confirmationMessage = "Successfully downloaded JSON"
                 showingConfirmation = true
             } catch {
-                print("Failed to get Json : \(error.localizedDescription)")
+                print("Failed to get JSON: \(error.localizedDescription)")
                 isShowingErrorMessage = true
-                errorMessage  = "No network connection"
+                errorMessage = "Failed to load data. Please check your network connection."
             }
         }
     }
+
 }
 
-#Preview {
-    ContentView()
-        .preferredColorScheme(.dark)
-}
